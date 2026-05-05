@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fashion Boutique | Custom Designs Tailored Just for You</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Noto+Serif:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-on-surface": "#f8efea",
+                "background": "#fff8f5",
+                "on-primary": "#ffffff",
+                "tertiary-container": "#eae9e6",
+                "surface-container-lowest": "#ffffff",
+                "on-surface": "#1e1b18",
+                "surface-dim": "#e1d8d4",
+                "inverse-primary": "#d2c4be",
+                "secondary-fixed-dim": "#e9c349",
+                "secondary-container": "#fed65b",
+                "outline-variant": "#d1c4be",
+                "on-tertiary-fixed-variant": "#464745",
+                "primary-fixed-dim": "#d2c4be",
+                "surface-container-high": "#efe6e2",
+                "surface": "#fff8f5",
+                "inverse-surface": "#34302c",
+                "surface-bright": "#fff8f5",
+                "primary": "#675c58",
+                "primary-container": "#f5e6e0",
+                "tertiary-fixed-dim": "#c7c6c4",
+                "surface-container": "#f5ece7",
+                "surface-tint": "#675c58",
+                "on-surface-variant": "#4e4541",
+                "surface-variant": "#e9e1dc",
+                "error-container": "#ffdad6",
+                "on-error": "#ffffff",
+                "on-primary-fixed-variant": "#4e4541",
+                "on-secondary-container": "#745c00",
+                "on-tertiary-container": "#686967",
+                "error": "#ba1a1a",
+                "tertiary": "#5e5f5d",
+                "on-primary-fixed": "#211a17",
+                "on-secondary-fixed-variant": "#574500",
+                "on-primary-container": "#716662",
+                "surface-container-low": "#fbf2ed",
+                "surface-container-highest": "#e9e1dc",
+                "primary-fixed": "#eedfda",
+                "secondary-fixed": "#ffe088",
+                "secondary": "#735c00",
+                "on-tertiary-fixed": "#1a1c1a",
+                "on-background": "#1e1b18",
+                "on-error-container": "#93000a",
+                "on-tertiary": "#ffffff",
+                "outline": "#807570",
+                "on-secondary": "#ffffff",
+                "on-secondary-fixed": "#241a00",
+                "tertiary-fixed": "#e3e2e0"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "gutter": "32px",
+                "container-max": "1440px",
+                "unit": "8px",
+                "section-gap": "120px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px"
+            },
+            "fontFamily": {
+                "body-md": ["Plus Jakarta Sans"],
+                "body-lg": ["Plus Jakarta Sans"],
+                "headline-md": ["Noto Serif"],
+                "headline-lg": ["Noto Serif"],
+                "display-xl": ["Noto Serif"],
+                "label-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                "headline-lg": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .luxury-shadow {
+            box-shadow: 0 40px 80px -20px rgba(245, 230, 224, 0.4);
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Info Bar -->
+<div class="bg-primary-container/30 text-on-primary-container px-margin-mobile md:px-margin-desktop py-2 flex justify-between items-center border-b border-outline-variant/20">
+<div class="flex items-center gap-4 text-label-sm font-label-sm uppercase tracking-widest">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                Bagh Amberpet, Hyderabad
+            </span>
+<span class="hidden md:flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call</span>
+                +91 95734 03852
+            </span>
+</div>
+<div class="flex gap-4">
+<a class="hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined text-[18px]">share</span></a>
+</div>
+</div>
+<!-- TopAppBar (Shared Component) -->
+<header class="bg-surface/70 backdrop-blur-xl fixed top-10 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Fashion Boutique Logo" class="h-12 w-12 object-contain" data-alt="A minimalist elegant luxury fashion logo for Fashion Boutique. The letters 'Fb' are intertwined in a sophisticated thin serif typography with a gold foil texture against a pristine white background, representing a premium boutique brand identity with clean lines and high-end aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss"/>
+<span class="font-headline-md text-headline-md text-secondary tracking-tighter">Fashion Boutique</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary border-b border-secondary pb-1 transition-colors duration-300" href="#about">Craftsmanship</a>
+<a class="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#portfolio">Portfolio</a>
+<a class="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-inverse-surface text-on-primary px-8 py-3 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:opacity-80 transition-opacity">
+                Book Visit
+            </button>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img class="w-full h-full object-cover" data-alt="An elegant high-fashion model wearing a bespoke couture gown made of soft blush pink silk. She stands in a sun-drenched, minimalist architectural space with large windows casting soft, artistic shadows. The mood is serene and exclusive, reflecting a quiet luxury aesthetic with warm golden hour lighting and a palette of creams and subtle metallic golds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_lz0K5QUhE51BPJGdXerY6aRLmhhsZOu2q8PW4XN1eiT-ZptWUQQFg-3S_0qKfM64B94PLjrynMwH-faPUdRn3TvlQdycqn_lEtPQ7XNyvM3Es0SE79p9mRdfWfVHIfT1N_A3c37DQO7qGHPLtIm-NDtcrD-GyOuJgmFX8_Jbk6GesQPGmGyvoj17Zd4ntVI4bPtWB55ZGnbMsNFbFPiV2FES8aBC7_IFqgTuM1u-qEMxP1gu8n-yuUxJofwg3W_mI6RWa7iEIXU"/>
+</div>
+<div class="relative z-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-6 block">Quiet Luxury Defined</span>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-8">Fashion Boutique</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">Custom Designs Tailored Just for You. Experience the art of bespoke tailoring where every stitch tells a story of elegance and precision.</p>
+<div class="flex gap-6">
+<a class="bg-primary text-on-primary px-10 py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:shadow-xl transition-all" href="#services">Explore Services</a>
+<a class="flex items-center gap-2 font-label-sm text-label-sm text-secondary uppercase tracking-widest border-b border-secondary/30 pb-1 hover:border-secondary transition-all" href="#contact">Consultation</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary-container rounded-full -z-10 opacity-50"></div>
+<img class="rounded-xl luxury-shadow w-full aspect-[4/5] object-cover" data-alt="A close-up shot of a master craftsman's hands meticulously working on a piece of delicate ivory fabric with gold embroidery. The setting is a clean, bright atelier filled with spools of high-quality silk thread and tailor's tools. The lighting is soft and focused, emphasizing the intricate detail and dedication to quality craftsmanship in a high-end boutique environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRT8nRtNrsLilZQPr9rdqZ23QFLgGq74bGLOFQniDOOBimfqaAcLUOVFrR7nw5TRj41A2twh0r1wVgNDlHC7RISEGsT_44G0Z3gEghrwf0aPrNcOYVFsAlKHSQSbBQKiYd5ho9M9wUUgGb6LU67k6O8S3oFX8u6suP8YFQWdj6TJuzjZIGUoqADSB1rm3VVOXiiV7y-d5QJokudxLgbbCZgPt_3_bTj5vJkKb3uhP1VJ1nR1s89lNrTxhhxHMiCngzdgvBkDDUGZc"/>
+</div>
+<div class="space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The Art of Fine Tailoring</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">Located in the heart of Bagh Amberpet, Hyderabad, our boutique is a sanctuary for those who seek individuality in every garment. We specialize in the meticulous art of custom stitching, blending traditional craftsmanship with contemporary silhouettes.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2">Personalized Design</h4>
+<p class="text-on-surface-variant">One-on-one consultations to map your vision onto fabric.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface mb-2">Precision Stitching</h4>
+<p class="text-on-surface-variant">Master tailors ensuring every seam is structurally perfect.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container py-section-gap px-margin-mobile md:px-margin-desktop" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Our Collections</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Curated Offerings</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Blouses -->
+<div class="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A collection of vibrant, intricately embroidered designer blouses displayed on elegant mannequins. The fabrics include rich silks and brocades with detailed zardosi work. The boutique setting is minimal and luxurious, with soft ambient lighting highlighting the textures and craftsmanship of each piece in a palette of deep jewel tones and golds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0qZEEQ_D3nJtXyxZUDGUqeOMYE7mzGFP2Y0EqARPvU9_j-2UV7s1afNC3n_BuubVxHeRgawUBr7r7e1joBIX5hWIpMutFs2_BKxRVtvdY-NlyiyE7hjK7NTHFtuI_35cqoJ5-k_X_dy4DYCvYwd_GLJFV6sQ42eXNnxxbTI1uxlmY2UFO2M20Pr7VXKd2cj2GBjoGMsXbuUdTc-MwghOwuUeny-F1rECO2qEtK9roYieIXS6tbRP1Z3N1qEA6xT0HqlcQwe0u9XA"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Blouses</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between"><span>Regular</span> <span>₹750–850</span></li>
+<li class="flex justify-between"><span>Princess Cut</span> <span>₹950</span></li>
+<li class="flex justify-between"><span>Work Blouse</span> <span>₹1000</span></li>
+<li class="flex justify-between"><span>Pattern Designs</span> <span>₹1100–1200</span></li>
+</ul>
+</div>
+</div>
+<!-- Frocks & Suits -->
+<div class="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500 md:mt-12">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An elegant, full-length custom-stitched Anarkali suit in a soft pastel green fabric, featuring delicate lace detailing and a flowing silhouette. The garment is presented in a high-end boutique environment with minimalist decor and marble flooring, illuminated by warm, diffused light that emphasizes the fluid movement of the fine textile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxv1EVpDxPtBk8fEU3zqX9Ck-3_4NcJ4XZQBOd4Gbe9d-O0Y235LgIejdL5X4oz5Ojc84UUFPvOTMZQ5YE4SBJzqrRqCQiNmS-CEY_VQXFIbVjoESM6EUKKOu_BTi3iYZkrpXLlrFq8kVRyurkrsDNqoYvMf9790jkDU2US00eXoN1F8u_g4CQ7Sn3lMwzggInP_LX5Z7_7GMiRpRS2ArVePzENXiL2a-JOHM-bKXLZktmaCYIQN78ZCBTD3opXgfNUVpfuGMX8Wk"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Suits &amp; Frocks</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between"><span>Regular Suits</span> <span>₹750–850</span></li>
+<li class="flex justify-between"><span>Anarkali Style</span> <span>₹1500–2000</span></li>
+<li class="flex justify-between"><span>Custom Frocks</span> <span>₹1500–1800</span></li>
+</ul>
+</div>
+</div>
+<!-- Heavy Work -->
+<div class="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
+<div class="aspect-[3/4] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A stunning bridal lehenga blouse with heavy gold thread embroidery and mirror work, showcased under a focused spotlight. The deep red velvet fabric provides a rich contrast to the gold ornamentation. The atmosphere is one of ultimate luxury and exclusivity, with a dark, sophisticated backdrop that makes the bridal garment the center of attention." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0OJB7zKUdpXcxa5nE36srRCv3bDzftNTkH9IXv6GtsjVv2lQdKsGA7KQVZ_tN8kgAPuj22_0WX6CBUW7asln0erQ1nCbKqNOyGMQatgRU5xjGrWbjoHRjoDnKqb8mZ0-gauaEsaaZ3xBZEnT-e-WESFSDiBzLZDYTb-WaZZt098oA9ICHatGcPADG12xXv4lFfHcFPt2Y3aQaq2OfLMng7UNL85_3HlMjrpWMTocYFZZihiPwAge5O84qA5Zr5wOMhcOL8wgk2lc"/>
+</div>
+<div class="p-8">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Grand Couture</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between"><span>Lehenga Blouses</span> <span>₹1800–2500</span></li>
+<li class="flex justify-between"><span>Heavy Bridal Work</span> <span>₹3000+</span></li>
+<li class="flex justify-between"><span>Crop Tops</span> <span>₹1800+</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Grid (Bento Style) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="portfolio">
+<div class="text-center mb-24">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Boutique Masterpieces</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+<div class="col-span-2 row-span-2 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="A wide-angle shot of the Fashion Boutique's interior in Hyderabad, showcasing a minimalist, modern atelier with white walls, golden accents, and neatly arranged bespoke garments on copper racks. The space is filled with natural light, creating a bright and airy atmosphere that reflects a premium, serene shopping experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdVMlc8Rmxn1oCKrnBLXC4AMo0MJ2d1tZNPo7pH1jTA2GyJif97G_-agH5MEuftkOqQUHgIy6nAX6yzcllOpp8O2R6ej5heKas6DnRWEzJfcxPSaworcwdDZu5K51WdVbu3v1-jIq_8B3x6wOSjUa2jWYIQ2y9cVNcBml6hWJ88rxT24j3ZL-4L-4CGMYfQBbbmV14a-fG93_ReI8jei539WW7NIMdueHQ_mDdguG9PZU2tnD7Kyq82zqo19LjKBUJpUN3tfziScg"/>
+</div>
+<div class="overflow-hidden rounded-xl aspect-square">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="Close-up of high-quality fabric swatches in a palette of blush pink, cream, and gold, neatly organized in a designer's studio. The soft lighting highlights the different textures of silk, satin, and linen, symbolizing the curated material selection available for custom tailoring services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtn1h0Au2zzFd7-D98Lb07nW-Yyz7Y5ZsTAcePCs0Y-MQNba4BRP_SIT4a5WU7bsdJ7O_FYzeW-gOkne6tAMeOZvwCFFZnyb87erReEu6CVSiSnxGddkQ0zJwWkTtvqyp7sWHa3c3KURsjbdy5yNW-gXAgLxiWXjWjGsdkSYWWky8KXJzhpIRRBiq2WLs2fCJJ9ENToKnWxeI0Khda38FIqsFBroy-G3E47C_mnWDENU4LMQdX1VmXS8XBkUpVNcK_SxBtPHEv4_I"/>
+</div>
+<div class="overflow-hidden rounded-xl aspect-square">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="An artistic fashion photograph featuring a model in a minimal, high-end outfit, walking through a gallery-like space. The composition uses negative space and soft shadows to create a magazine-style editorial look, emphasizing the clean lines and modern softness of the boutique's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2cInxH2HlcwX2wwNEDcIuh_ZfzCBFFBsJU9AZyU5fsE3P8HgShB8S327q1G2Hp16zcnKxLidBkHfrKdUVYxy3T6rZKWtlzQpydHWDd9Rft_yc9YsbL4vmkAXwLDOPtO9XOPaYzq-mJda4ESGvUiZAdw4Uf-LCV4AZ4nRKnq3E5-rDI_ngTpcmf3sn5XWpKEUwcqn0zQmT25wLA1gp9vO9_D1MVxDyz88XVorT8ybHNL1CG3yEkk0MI0xpYg2rL9qfOONKZz_Wq6s"/>
+</div>
+<div class="col-span-2 overflow-hidden rounded-xl aspect-[16/9]">
+<img class="w-full h-full object-cover hover:scale-110 transition-transform duration-700" data-alt="A detailed shot of a custom-designed co-ord set in a Kali style pattern, featuring a sophisticated geometric print in charcoal and beige. The outfit is styled on a wooden hanger against a clean textured wall, representing the modern and versatile custom stitching options offered by the boutique." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4x_m8_Xfixlw4Xr8gncO0OXL8MabIrHQHX9YSIMBDGUCdqgvqWfRYlm52H-Ao6BeVO6avCEQ0FjznDOsNgb1pjXvIMsrJSmCW2UcxACGtuZ1JJaYFgTiA0-Z8xyFNPLrMyFJcMU8OhTELpV-tE77DuBZSOuMyUFtMX1yzfriVOtlF3lTL0kAa1gKKqaNowSye-t-RZfIhTwmnUamuNilmy8VKb_S23O94SgO1rOinZEZGtFvACihTDlxSDYWmYF4wmKpKrw3PUfs"/>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-surface-container-high px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-24">
+<div>
+<h2 class="font-display-xl text-headline-lg mb-8">Visit Our Atelier</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Step into a world of curated elegance. Our boutique in Bagh Amberpet is designed to be a personal space for your fashion journey.</p>
+<div class="space-y-8 mb-12">
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-secondary luxury-shadow">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Address</h4>
+<p class="text-on-surface-variant">2-2-647/A/1&amp;2, Beside Saibaba Temple, Bagh Amberpet, Hyderabad, 500013</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="w-14 h-14 bg-white rounded-full flex items-center justify-center text-secondary luxury-shadow">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Phone</h4>
+<p class="text-on-surface-variant">+91 95734 03852</p>
+</div>
+</div>
+</div>
+<div class="h-[300px] w-full rounded-xl overflow-hidden luxury-shadow grayscale">
+<iframe allowfullscreen="" data-location="Bagh Amberpet, Hyderabad" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6105828469373!2d78.513544!3d17.3944682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb997f39d1b09b%3A0x673c246f414418a!2sBagh%20Amberpet%2C%20Hyderabad%2C%20Telangana%20500013!5e0!3m2!1sen!2sin!4v1700000000000" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+<div class="bg-surface p-12 rounded-xl luxury-shadow h-fit">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-8">Send an Inquiry</h3>
+<form action="#" class="space-y-6">
+<div class="relative">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Name</label>
+<input class="w-full bg-transparent border-0 border-b border-primary-container p-0 pb-2 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" placeholder="Your Full Name" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">WhatsApp Number</label>
+<input class="w-full bg-transparent border-0 border-b border-primary-container p-0 pb-2 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" placeholder="+91" type="tel"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Service Needed</label>
+<select class="w-full bg-transparent border-0 border-b border-primary-container p-0 pb-2 focus:ring-0 focus:border-secondary transition-colors text-on-surface-variant">
+<option>Blouse Stitching</option>
+<option>Bridal Lehenga</option>
+<option>Anarkali / Suit</option>
+<option>Co-ord Sets</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-label-sm text-label-sm text-secondary uppercase tracking-widest block mb-2">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-primary-container p-0 pb-2 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline-variant/50" placeholder="Tell us about your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-opacity mt-4" type="submit">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container dark:bg-surface-container-highest w-full py-16">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-2">Fashion Boutique</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant uppercase tracking-widest">Est. 2024 • Hyderabad</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Terms of Service</a>
+<a class="text-secondary dark:text-secondary-fixed font-bold hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Instagram</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">WhatsApp</a>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant text-center md:text-right">
+                © 2024 Fashion Boutique Hyderabad. All rights reserved.
+            </p>
+</div>
+</footer>
+</body></html>
