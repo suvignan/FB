@@ -6,7 +6,7 @@ function App() {
       {/* TopAppBar Container */}
       <header className="relative w-full z-50 flex flex-col shadow-sm">
         {/* Top Info Bar */}
-        
+
 
         {/* Main Navigation */}
         <div className="w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10">
@@ -106,7 +106,7 @@ function App() {
                   {/* Item: Princess Cut */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-48 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtn1h0Au2zzFd7-D98Lb07nW-Yyz7Y5ZsTAcePCs0Y-MQNba4BRP_SIT4a5WU7bsdJ7O_FYzeW-gOkne6tAMeOZvwCFFZnyb87erReEu6CVSiSnxGddkQ0zJwWkTtvqyp7sWHa3c3KURsjbdy5yNW-gXAgLxiWXjWjGsdkSYWWky8KXJzhpIRRBiq2WLs2fCJJ9ENToKnWxeI0Khda38FIqsFBroy-G3E47C_mnWDENU4LMQdX1VmXS8XBkUpVNcK_SxBtPHEv4_I" alt="Princess Cut Blouse" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Blouse/Princess%20cut.jpg" alt="Princess Cut Blouse" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -119,7 +119,7 @@ function App() {
                   {/* Item: Work Blouse */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-48 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdVMlc8Rmxn1oCKrnBLXC4AMo0MJ2d1tZNPo7pH1jTA2GyJif97G_-agH5MEuftkOqQUHgIy6nAX6yzcllOpp8O2R6ej5heKas6DnRWEzJfcxPSaworcwdDZu5K51WdVbu3v1-jIq_8B3x6wOSjUa2jWYIQ2y9cVNcBml6hWJ88rxT24j3ZL-4L-4CGMYfQBbbmV14a-fG93_ReI8jei539WW7NIMdueHQ_mDdguG9PZU2tnD7Kyq82zqo19LjKBUJpUN3tfziScg" alt="Work Blouse" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Blouse/Work-3.webp" alt="Work Blouse" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -132,7 +132,7 @@ function App() {
                   {/* Item: Pattern Designs */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-48 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2cInxH2HlcwX2wwNEDcIuh_ZfzCBFFBsJU9AZyU5fsE3P8HgShB8S327q1G2Hp16zcnKxLidBkHfrKdUVYxy3T6rZKWtlzQpydHWDd9Rft_yc9YsbL4vmkAXwLDOPtO9XOPaYzq-mJda4ESGvUiZAdw4Uf-LCV4AZ4nRKnq3E5-rDI_ngTpcmf3sn5XWpKEUwcqn0zQmT25wLA1gp9vO9_D1MVxDyz88XVorT8ybHNL1CG3yEkk0MI0xpYg2rL9qfOONKZz_Wq6s" alt="Pattern Designs" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Blouse/Pattern22.png" alt="Pattern Designs" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -152,7 +152,7 @@ function App() {
                   {/* Item: Regular Suits */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxv1EVpDxPtBk8fEU3zqX9Ck-3_4NcJ4XZQBOd4Gbe9d-O0Y235LgIejdL5X4oz5Ojc84UUFPvOTMZQ5YE4SBJzqrRqCQiNmS-CEY_VQXFIbVjoESM6EUKKOu_BTi3iYZkrpXLlrFq8kVRyurkrsDNqoYvMf9790jkDU2US00eXoN1F8u_g4CQ7Sn3lMwzggInP_LX5Z7_7GMiRpRS2ArVePzENXiL2a-JOHM-bKXLZktmaCYIQN78ZCBTD3opXgfNUVpfuGMX8Wk" alt="Regular Suits" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Suits/REgualr%20Suits.png" alt="Regular Suits" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -165,7 +165,7 @@ function App() {
                   {/* Item: Anarkali Style */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRT8nRtNrsLilZQPr9rdqZ23QFLgGq74bGLOFQniDOOBimfqaAcLUOVFrR7nw5TRj41A2twh0r1wVgNDlHC7RISEGsT_44G0Z3gEghrwf0aPrNcOYVFsAlKHSQSbBQKiYd5ho9M9wUUgGb6LU67k6O8S3oFX8u6suP8YFQWdj6TJuzjZIGUoqADSB1rm3VVOXiiV7y-d5QJokudxLgbbCZgPt_3_bTj5vJkKb3uhP1VJ1nR1s89lNrTxhhxHMiCngzdgvBkDDUGZc" alt="Anarkali Style" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Suits/A%20Suits.png" alt="Anarkali Style" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -178,7 +178,7 @@ function App() {
                   {/* Item: Custom Frocks */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4x_m8_Xfixlw4Xr8gncO0OXL8MabIrHQHX9YSIMBDGUCdqgvqWfRYlm52H-Ao6BeVO6avCEQ0FjznDOsNgb1pjXvIMsrJSmCW2UcxACGtuZ1JJaYFgTiA0-Z8xyFNPLrMyFJcMU8OhTELpV-tE77DuBZSOuMyUFtMX1yzfriVOtlF3lTL0kAa1gKKqaNowSye-t-RZfIhTwmnUamuNilmy8VKb_S23O94SgO1rOinZEZGtFvACihTDlxSDYWmYF4wmKpKrw3PUfs" alt="Custom Frocks" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Froks/Custom%20Froks.png" alt="Custom Frocks" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -191,7 +191,7 @@ function App() {
                   {/* Item: Co-ord Sets */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0qZEEQ_D3nJtXyxZUDGUqeOMYE7mzGFP2Y0EqARPvU9_j-2UV7s1afNC3n_BuubVxHeRgawUBr7r7e1joBIX5hWIpMutFs2_BKxRVtvdY-NlyiyE7hjK7NTHFtuI_35cqoJ5-k_X_dy4DYCvYwd_GLJFV6sQ42eXNnxxbTI1uxlmY2UFO2M20Pr7VXKd2cj2GBjoGMsXbuUdTc-MwghOwuUeny-F1rECO2qEtK9roYieIXS6tbRP1Z3N1qEA6xT0HqlcQwe0u9XA" alt="Co-ord Sets" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Co-Ords%20Set/Coords%20set.png" alt="Co-ord Sets" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -211,7 +211,7 @@ function App() {
                   {/* Item: Lehenga Blouses */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0OJB7zKUdpXcxa5nE36srRCv3bDzftNTkH9IXv6GtsjVv2lQdKsGA7KQVZ_tN8kgAPuj22_0WX6CBUW7asln0erQ1nCbKqNOyGMQatgRU5xjGrWbjoHRjoDnKqb8mZ0-gauaEsaaZ3xBZEnT-e-WESFSDiBzLZDYTb-WaZZt098oA9ICHatGcPADG12xXv4lFfHcFPt2Y3aQaq2OfLMng7UNL85_3HlMjrpWMTocYFZZihiPwAge5O84qA5Zr5wOMhcOL8wgk2lc" alt="Lehenga Blouses" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Lehenga/ll2.png" alt="Lehenga Blouses" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -224,7 +224,7 @@ function App() {
                   {/* Item: Heavy Bridal Work */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_lz0K5QUhE51BPJGdXerY6aRLmhhsZOu2q8PW4XN1eiT-ZptWUQQFg-3S_0qKfM64B94PLjrynMwH-faPUdRn3TvlQdycqn_lEtPQ7XNyvM3Es0SE79p9mRdfWfVHIfT1N_A3c37DQO7qGHPLtIm-NDtcrD-GyOuJgmFX8_Jbk6GesQPGmGyvoj17Zd4ntVI4bPtWB55ZGnbMsNFbFPiV2FES8aBC7_IFqgTuM1u-qEMxP1gu8n-yuUxJofwg3W_mI6RWa7iEIXU" alt="Heavy Bridal Work" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Lehenga/Heavy%20Briday%20work.png" alt="Heavy Bridal Work" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -237,7 +237,7 @@ function App() {
                   {/* Item: Crop Tops */}
                   <div className="bg-surface rounded-xl overflow-hidden group hover:luxury-shadow transition-all duration-500">
                     <div className="h-56 w-full overflow-hidden">
-                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdVMlc8Rmxn1oCKrnBLXC4AMo0MJ2d1tZNPo7pH1jTA2GyJif97G_-agH5MEuftkOqQUHgIy6nAX6yzcllOpp8O2R6ej5heKas6DnRWEzJfcxPSaworcwdDZu5K51WdVbu3v1-jIq_8B3x6wOSjUa2jWYIQ2y9cVNcBml6hWJ88rxT24j3ZL-4L-4CGMYfQBbbmV14a-fG93_ReI8jei539WW7NIMdueHQ_mDdguG9PZU2tnD7Kyq82zqo19LjKBUJpUN3tfziScg" alt="Designer Crop Tops" />
+                      <img className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/Co-Ords%20Set/Gemini_Generated_Image_s1okyfs1okyfs1ok.png" alt="Designer Crop Tops" />
                     </div>
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
@@ -302,13 +302,13 @@ function App() {
                 </div>
               </div>
               <div className="h-[300px] w-full rounded-xl overflow-hidden luxury-shadow">
-                <iframe 
-                  allowFullScreen="" 
-                  height="100%" 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade" 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6105828469373!2d78.513544!3d17.3944682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb997f39d1b09b%3A0x673c246f414418a!2sBagh%20Amberpet%2C%20Hyderabad%2C%20Telangana%20500013!5e0!3m2!1sen!2sin!4v1700000000000" 
-                  style={{ border: 0 }} 
+                <iframe
+                  allowFullScreen=""
+                  height="100%"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.6105828469373!2d78.513544!3d17.3944682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb997f39d1b09b%3A0x673c246f414418a!2sBagh%20Amberpet%2C%20Hyderabad%2C%20Telangana%20500013!5e0!3m2!1sen!2sin!4v1700000000000"
+                  style={{ border: 0 }}
                   width="100%"
                 ></iframe>
               </div>
@@ -317,8 +317,8 @@ function App() {
               <span className="material-symbols-outlined text-6xl text-[#25D366] mb-6">chat</span>
               <h3 className="font-headline-md text-headline-md text-on-surface mb-8">Chat With Us</h3>
               <a href="https://wa.me/919573403852?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20boutique%20services." target="_blank" rel="noopener noreferrer" className="w-full bg-[#25D366] text-white py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 transition-opacity flex items-center justify-center gap-3">
-                 <span className="material-symbols-outlined">forum</span>
-                 Contact via WhatsApp
+                <span className="material-symbols-outlined">forum</span>
+                Contact via WhatsApp
               </a>
             </div>
           </div>
