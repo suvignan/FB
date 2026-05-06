@@ -21,9 +21,6 @@ function App() {
               <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#portfolio">Portfolio</a>
               <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
             </div>
-            <a href="#contact" className="bg-inverse-surface text-on-primary px-8 py-3 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:opacity-80 transition-opacity text-center block">
-              Book Visit
-            </a>
           </nav>
         </div>
       </header>
@@ -330,16 +327,16 @@ function App() {
         <div className="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto gap-8">
           <div className="flex flex-col items-center md:items-start">
             <span className="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-2">Fashion Boutique</span>
-            <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant uppercase tracking-widest">Est. 2024 • Hyderabad</p>
+            <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant uppercase tracking-widest">Est. 2000 • Hyderabad</p>
           </div>
           <div className="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm">
-            <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Privacy Policy</a>
+            {/* <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Privacy Policy</a>
             <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Terms of Service</a>
             <a className="text-secondary dark:text-secondary-fixed font-bold hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Instagram</a>
-            <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">WhatsApp</a>
+            <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">WhatsApp</a> */}
           </div>
           <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant text-center md:text-right">
-            © 2024 Fashion Boutique Hyderabad. All rights reserved.
+            © 2000 Fashion Boutique Hyderabad. All rights reserved.
           </p>
         </div>
       </footer>
