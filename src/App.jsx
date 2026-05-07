@@ -10,17 +10,17 @@ function App() {
 
         {/* Main Navigation */}
         <div className="w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10">
-          <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 md:py-8 max-w-container-max mx-auto">
-            <div className="flex items-center gap-6">
-              <img alt="Fashion Boutique Logo" className="h-24 w-24 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
-              <span className="font-headline-lg text-headline-lg text-secondary tracking-tighter">Fashion Boutique</span>
+          <nav className="flex justify-center items-center w-full px-margin-mobile md:px-margin-desktop py-8 md:py-12 max-w-container-max mx-auto">
+            <div className="flex flex-col items-center gap-4">
+              <img alt="Fashion Boutique Logo" className="h-32 w-32 md:h-40 md:w-40 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
+              <span className="font-headline-lg text-headline-lg text-secondary tracking-tighter text-center">Fashion Boutique</span>
             </div>
-            <div className="hidden md:flex items-center gap-8">
+            {/* <div className="hidden md:flex items-center gap-8">
               <a className="font-body-md text-body-md text-secondary border-b border-secondary pb-1 transition-colors duration-300" href="#about">Craftsmanship</a>
               <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#services">Services</a>
               <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#portfolio">Portfolio</a>
               <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
-            </div>
+            </div> */}
           </nav>
         </div>
       </header>
