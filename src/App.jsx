@@ -1,31 +1,36 @@
 
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       {/* TopAppBar Container */}
       <header className="relative w-full z-50 flex flex-col shadow-sm">
-        {/* Top Info Bar */}
-
-
         {/* Main Navigation */}
         <div className="w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10">
-          <nav className="flex justify-center items-center w-full px-margin-mobile md:px-margin-desktop py-8 md:py-12 max-w-container-max mx-auto">
+          <nav className="flex justify-center items-center w-full px-margin-mobile md:px-margin-desktop py-10 md:py-16 max-w-container-max mx-auto">
             <div className="flex flex-col items-center gap-4">
-              <img alt="Fashion Boutique Logo" className="h-32 w-32 md:h-40 md:w-40 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
+              <img alt="Fashion Boutique Logo" className="h-32 w-32 md:h-44 md:w-44 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
               <span className="font-headline-lg text-headline-lg text-secondary tracking-tighter text-center">Fashion Boutique</span>
             </div>
-            {/* <div className="hidden md:flex items-center gap-8">
-              <a className="font-body-md text-body-md text-secondary border-b border-secondary pb-1 transition-colors duration-300" href="#about">Craftsmanship</a>
-              <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#services">Services</a>
-              <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#portfolio">Portfolio</a>
-              <a className="font-body-md text-body-md text-on-surface-variant pb-1 hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
-            </div> */}
           </nav>
         </div>
       </header>
 
-      <main className="pt-32">
+      <main>
         {/* Hero Section */}
         <section className="relative h-[70vh] min-h-[500px] max-h-[800px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -46,7 +51,7 @@ function App() {
         </section>
 
         {/* About Section */}
-        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="about">
           <div className="grid md:grid-cols-2 gap-24 items-center">
             <div className="relative flex justify-center">
               <div className="absolute -top-10 -left-4 w-40 h-40 bg-primary-container rounded-full -z-10 opacity-50"></div>
@@ -75,8 +80,44 @@ function App() {
           </div>
         </section>
 
+        {/* Our Process Section */}
+        <section className="bg-surface py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="process">
+          <div className="max-w-container-max mx-auto">
+            <div className="text-center mb-16">
+              <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">The Experience</span>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface">Our Signature Process</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+              {/* Process Step 1 */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-primary font-display-xl text-3xl">1</div>
+                <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Consultation</h4>
+                <p className="text-on-surface-variant text-sm">Meet our designers to discuss your vision, style preferences, and fabric choices.</p>
+              </div>
+              {/* Process Step 2 */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-primary font-display-xl text-3xl">2</div>
+                <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Measurements</h4>
+                <p className="text-on-surface-variant text-sm">Precise measurements taken by our master tailors to ensure a flawless, custom fit.</p>
+              </div>
+              {/* Process Step 3 */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-primary font-display-xl text-3xl">3</div>
+                <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Craftsmanship</h4>
+                <p className="text-on-surface-variant text-sm">Every stitch is handled with care using premium threads and artisanal techniques.</p>
+              </div>
+              {/* Process Step 4 */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="w-20 h-20 rounded-full bg-primary-container flex items-center justify-center text-primary font-display-xl text-3xl">4</div>
+                <h4 className="font-label-sm text-label-sm uppercase tracking-widest text-on-surface">Final Fitting</h4>
+                <p className="text-on-surface-variant text-sm">A dedicated trial session to perfect the garment before it leaves our atelier.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Services Section */}
-        <section className="bg-surface-container py-section-gap px-margin-mobile md:px-margin-desktop" id="services">
+        <section className="bg-surface-container py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="services">
           <div className="max-w-container-max mx-auto">
             <div className="text-center mb-24">
               <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Our Collections</span>
@@ -95,7 +136,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Regular Blouse</h4>
-                        <span className="text-secondary font-label-sm">₹750–850</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Classic daily wear styling, perfect for comfortable elegance.</p>
                     </div>
@@ -108,7 +148,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Princess Cut</h4>
-                        <span className="text-secondary font-label-sm">₹950</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">A flattering, seamless front design providing a perfect contour.</p>
                     </div>
@@ -121,7 +160,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Work Blouse</h4>
-                        <span className="text-secondary font-label-sm">₹1000</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Detailed with subtle handwork, ideal for festive occasions.</p>
                     </div>
@@ -134,7 +172,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Pattern Designs</h4>
-                        <span className="text-secondary font-label-sm">₹1100–1200</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Custom necklines and back patterns designed exclusively for you.</p>
                     </div>
@@ -154,7 +191,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Regular Suits</h4>
-                        <span className="text-secondary font-label-sm">₹750–850</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Traditional Salwar Kameez sets stitched with precise fitting.</p>
                     </div>
@@ -167,7 +203,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Anarkali Style</h4>
-                        <span className="text-secondary font-label-sm">₹1500–2000</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Flowing, floor-length elegance with intricate pleating.</p>
                     </div>
@@ -180,7 +215,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Custom Frocks</h4>
-                        <span className="text-secondary font-label-sm">₹1500–1800</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Western and Indo-western frocks with beautiful flares.</p>
                     </div>
@@ -193,7 +227,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Co-ord Sets</h4>
-                        <span className="text-secondary font-label-sm">₹1200–2000</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Contemporary matching sets blending comfort with Indian styling.</p>
                     </div>
@@ -213,7 +246,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Lehenga Blouses</h4>
-                        <span className="text-secondary font-label-sm">₹1800–2500</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Statement blouses with heavy embroidery to complement lehengas.</p>
                     </div>
@@ -226,7 +258,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Heavy Bridal Work</h4>
-                        <span className="text-secondary font-label-sm">₹3000+</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Exquisite bridal craftsmanship featuring maggam and zardosi work.</p>
                     </div>
@@ -239,7 +270,6 @@ function App() {
                     <div className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-headline-sm text-on-surface">Designer Crop Tops</h4>
-                        <span className="text-secondary font-label-sm">₹1800+</span>
                       </div>
                       <p className="text-body-sm text-on-surface-variant">Modern, chic tops perfectly paired with skirts or palazzos.</p>
                     </div>
@@ -251,7 +281,7 @@ function App() {
         </section>
 
         {/* Gallery Grid */}
-        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="portfolio">
+        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="portfolio">
           <div className="text-center mb-24">
             <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Portfolio</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface">Boutique Masterpieces</h2>
@@ -272,8 +302,63 @@ function App() {
           </div>
         </section>
 
+        {/* Testimonials Section */}
+        <section className="bg-surface-container-low py-section-gap px-margin-mobile md:px-margin-desktop reveal" id="reviews">
+          <div className="max-w-container-max mx-auto">
+            <div className="text-center mb-16">
+              <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Kind Words</span>
+              <h2 className="font-headline-lg text-headline-lg text-on-surface">Customer Stories</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-surface p-8 rounded-xl luxury-shadow flex flex-col items-center text-center">
+                <div className="flex text-secondary mb-4">
+                  {[1, 2, 3, 4, 5].map(i => <span key={i} className="material-symbols-outlined text-sm">star</span>)}
+                </div>
+                <p className="italic text-on-surface-variant mb-6">"The best boutique in Amberpet! Their attention to detail on my bridal blouse was incredible. Highly recommend!"</p>
+                <h4 className="font-label-sm uppercase tracking-widest text-on-surface">Sravani Reddy</h4>
+              </div>
+              <div className="bg-surface p-8 rounded-xl luxury-shadow flex flex-col items-center text-center">
+                <div className="flex text-secondary mb-4">
+                  {[1, 2, 3, 4, 5].map(i => <span key={i} className="material-symbols-outlined text-sm">star</span>)}
+                </div>
+                <p className="italic text-on-surface-variant mb-6">"I got my custom frocks stitched here and the fit is just perfect. They really understand what the customer wants."</p>
+                <h4 className="font-label-sm uppercase tracking-widest text-on-surface">Ananya P.</h4>
+              </div>
+              <div className="bg-surface p-8 rounded-xl luxury-shadow flex flex-col items-center text-center">
+                <div className="flex text-secondary mb-4">
+                  {[1, 2, 3, 4, 5].map(i => <span key={i} className="material-symbols-outlined text-sm">star</span>)}
+                </div>
+                <p className="italic text-on-surface-variant mb-6">"Very professional service and timely delivery. The pattern designs for blouses are very modern and unique."</p>
+                <h4 className="font-label-sm uppercase tracking-widest text-on-surface">Meghana Rao</h4>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto reveal" id="faq">
+          <div className="text-center mb-16">
+            <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-4 block">Inquiries</span>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface">Common Questions</h2>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-6">
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">How long does custom stitching take?</h4>
+              <p className="text-on-surface-variant">Typically, regular blouses take 3-5 days, while heavy bridal work and couture items may take 10-14 days depending on the intricacy.</p>
+            </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">Do you provide the fabric or should I bring mine?</h4>
+              <p className="text-on-surface-variant">We primarily stitch on fabric provided by you to ensure it's exactly what you like, but we can recommend several trusted local vendors for specific materials.</p>
+            </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">Can you replicate a design from a photo?</h4>
+              <p className="text-on-surface-variant">Yes! You can share your inspiration photos with us via WhatsApp or during your consultation, and we'll help bring a similar vision to life.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Contact Section */}
-        <section className="py-section-gap bg-surface-container-high px-margin-mobile md:px-margin-desktop" id="contact">
+        <section className="py-section-gap bg-surface-container-high px-margin-mobile md:px-margin-desktop reveal" id="contact">
           <div className="max-w-container-max mx-auto grid md:grid-cols-2 gap-24">
             <div>
               <h2 className="font-display-xl text-headline-lg mb-8">Visit Our Atelier</h2>
@@ -340,6 +425,27 @@ function App() {
           </p>
         </div>
       </footer>
+      <a
+        href="https://wa.me/919573403852?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20boutique%20services."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-28 right-8 z-[100] bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group"
+        aria-label="Contact on WhatsApp"
+      >
+        <span className="material-symbols-outlined text-2xl md:text-3xl">chat</span>
+        <span className="absolute right-full mr-4 bg-surface text-on-surface px-4 py-2 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+          Chat with us!
+        </span>
+      </a>
+
+      {/* Back to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 z-[100] bg-surface text-secondary border border-outline-variant/30 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container transition-all duration-300 group"
+        aria-label="Back to Top"
+      >
+        <span className="material-symbols-outlined group-hover:-translate-y-1 transition-transform">arrow_upward</span>
+      </button>
     </>
   );
 }
