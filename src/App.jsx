@@ -32,9 +32,24 @@ function Home() {
               <span className="font-label-sm text-label-sm text-secondary uppercase tracking-[0.3em] mb-6 block">Quiet Luxury Defined</span>
               <h1 className="font-display-xl text-display-xl text-on-surface mb-8">Fashion Boutique</h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">Custom Designs Tailored Just for You. Experience the art of bespoke tailoring where every stitch tells a story of elegance and precision.</p>
-              <div className="flex gap-6">
-                <a className="bg-primary text-on-primary px-10 py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:shadow-xl transition-all" href="#services">Explore Services</a>
-                <Link className="bg-surface text-secondary border border-secondary/20 px-10 py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-all" to="/gallery">Gallery Showcase</Link>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8">
+                <button 
+                  onClick={() => {
+                    const el = document.getElementById('services');
+                    if (el) {
+                      const offset = 100;
+                      const bodyRect = document.body.getBoundingClientRect().top;
+                      const elementRect = el.getBoundingClientRect().top;
+                      const elementPosition = elementRect - bodyRect;
+                      const offsetPosition = elementPosition - offset;
+                      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                    }
+                  }}
+                  className="bg-primary text-on-primary px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:shadow-xl transition-all text-center cursor-pointer w-full sm:w-auto"
+                >
+                  Explore Services
+                </button>
+                <Link className="bg-surface text-secondary border border-secondary/20 px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-all text-center w-full sm:w-auto" to="/gallery">Gallery Showcase</Link>
               </div>
             </div>
           </div>
@@ -450,11 +465,11 @@ function App() {
         href="https://wa.me/919573403852?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20boutique%20services."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-28 right-8 z-[100] bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group"
+        className="fixed bottom-28 left-8 md:left-auto md:right-8 z-[100] bg-[#25D366] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 group"
         aria-label="Contact on WhatsApp"
       >
         <span className="material-symbols-outlined text-2xl md:text-3xl">chat</span>
-        <span className="absolute right-full mr-4 bg-surface text-on-surface px-4 py-2 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
+        <span className="absolute left-full ml-4 md:left-auto md:right-full md:mr-4 bg-surface text-on-surface px-4 py-2 rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-lg">
           Chat with us!
         </span>
       </a>
