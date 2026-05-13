@@ -1,7 +1,8 @@
-
 import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Gallery from "./pages/Gallery";
 
-function App() {
+function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -17,18 +18,7 @@ function App() {
 
   return (
     <>
-      {/* TopAppBar Container */}
-      <header className="relative w-full z-50 flex flex-col shadow-sm">
-        {/* Main Navigation */}
-        <div className="w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10">
-          <nav className="flex justify-center items-center w-full px-margin-mobile md:px-margin-desktop py-10 md:py-16 max-w-container-max mx-auto">
-            <div className="flex flex-col items-center gap-4">
-              <img alt="Fashion Boutique Logo" className="h-32 w-32 md:h-44 md:w-44 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
-              <span className="font-headline-lg text-headline-lg text-secondary tracking-tighter text-center">Fashion Boutique</span>
-            </div>
-          </nav>
-        </div>
-      </header>
+
 
       <main>
         {/* Hero Section */}
@@ -44,7 +34,7 @@ function App() {
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-lg">Custom Designs Tailored Just for You. Experience the art of bespoke tailoring where every stitch tells a story of elegance and precision.</p>
               <div className="flex gap-6">
                 <a className="bg-primary text-on-primary px-10 py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:shadow-xl transition-all" href="#services">Explore Services</a>
-                <a className="flex items-center gap-2 font-label-sm text-label-sm text-secondary uppercase tracking-widest border-b border-secondary/30 pb-1 hover:border-secondary transition-all" href="#contact">Consultation</a>
+                <Link className="bg-surface text-secondary border border-secondary/20 px-10 py-5 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-all" to="/gallery">Gallery Showcase</Link>
               </div>
             </div>
           </div>
@@ -406,6 +396,42 @@ function App() {
           </div>
         </section>
       </main>
+    </>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <Router>
+      <header className="relative w-full z-50 flex flex-col shadow-sm">
+        {/* Main Navigation */}
+        <div className="w-full bg-surface/90 backdrop-blur-xl border-b border-outline-variant/10">
+          <nav className="flex justify-center items-center w-full px-margin-mobile md:px-margin-desktop py-10 md:py-16 max-w-container-max mx-auto">
+            <div className="flex flex-col items-center gap-4">
+              <img alt="Fashion Boutique Logo" className="h-32 w-32 md:h-44 md:w-44 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2m0qFKlCCPJssBn5BjIW2Zc8_2k7z2-A3bpxsG6EoueIfeg5ooXvPehKk2v_7O4-108GxM6Ld7ddmNC7e5EKV3-ifd4NFIcHNzp1yKoJaMB-ucHw00uYhIvPAsAe2vPINw2p-FS9zYsKgmn0VlyYDwTbjNwBB7yv9NRjSWiuYlGZwqplNWo3qao6AccqDouYx1z8CqT6AoY56JsPBkPeMhrcB_JaTu5GDI9tS_Gts-cpYR1AHtbUhkB4y-HhKeR7vUWRJluAuuss" />
+              <span className="font-headline-lg text-headline-lg text-secondary tracking-tighter text-center">Fashion Boutique</span>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/gallery" element={<Gallery />} />
+      </Routes>
 
       {/* Footer */}
       <footer className="bg-surface-container dark:bg-surface-container-highest w-full py-16">
@@ -414,17 +440,12 @@ function App() {
             <span className="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-2">Fashion Boutique</span>
             <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant uppercase tracking-widest">Est. 2000 • Hyderabad</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-8 font-label-sm text-label-sm">
-            {/* <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Privacy Policy</a>
-            <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Terms of Service</a>
-            <a className="text-secondary dark:text-secondary-fixed font-bold hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">Instagram</a>
-            <a className="text-on-surface-variant dark:text-surface-variant hover:text-secondary dark:hover:text-secondary-fixed transition-all duration-300 underline underline-offset-4" href="#">WhatsApp</a> */}
-          </div>
           <p className="font-label-sm text-label-sm text-on-surface-variant dark:text-surface-variant text-center md:text-right">
             © 2000 Fashion Boutique Hyderabad. All rights reserved.
           </p>
         </div>
       </footer>
+
       <a
         href="https://wa.me/919573403852?text=Hi!%20I%20would%20like%20to%20know%20more%20about%20your%20boutique%20services."
         target="_blank"
@@ -438,15 +459,14 @@ function App() {
         </span>
       </a>
 
-      {/* Back to Top Button */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-8 right-8 z-[100] bg-surface text-secondary border border-outline-variant/30 w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-primary-container transition-all duration-300 group"
         aria-label="Back to Top"
       >
         <span className="material-symbols-outlined group-hover:-translate-y-1 transition-transform">arrow_upward</span>
       </button>
-    </>
+    </Router>
   );
 }
 
