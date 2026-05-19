@@ -359,6 +359,22 @@ function Home() {
               <h4 className="font-headline-sm text-on-surface mb-3">Can you replicate a design from a photo?</h4>
               <p className="text-on-surface-variant">Yes! You can share your inspiration photos with us via WhatsApp or during your consultation, and we'll help bring a similar vision to life.</p>
             </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">Do I need an appointment to visit the boutique?</h4>
+              <p className="text-on-surface-variant">Walk-ins are always welcome, but we recommend booking an appointment for custom bridal or heavy couture wear so our designers can dedicate ample time to your consultation.</p>
+            </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">What if my custom outfit doesn't fit perfectly after the final trial?</h4>
+              <p className="text-on-surface-variant">Your satisfaction is our priority. If any minor adjustments are needed during your final fitting, we will alter it at no extra cost until it fits exactly as envisioned.</p>
+            </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">Do you do hand embroidery (Maggam/Zardosi work) in-house?</h4>
+              <p className="text-on-surface-variant">Yes! We have skilled artisans who specialize in intricate Maggam, Zardosi, and thread work to add that perfect luxurious touch to your bridal and festive wear.</p>
+            </div>
+            <div className="border-b border-outline-variant pb-6">
+              <h4 className="font-headline-sm text-on-surface mb-3">Do you offer international shipping?</h4>
+              <p className="text-on-surface-variant">Yes, we provide international shipping to other countries. Please contact us with your location and requirements, and we will assist you with the shipping details and costs.</p>
+            </div>
           </div>
         </section>
 
